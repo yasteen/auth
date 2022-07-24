@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3.7"
 services:
   kratos-migrate:
     image: oryd/kratos:v0.10.0
@@ -12,7 +12,7 @@ services:
       - type: bind
         source: ./config
         target: /etc/config/kratos
-    command: -c /etc/config/kratos/kratos.yml migrate sql -e --yes
+    command: -c /etc/config/kratos/kratos-static.yml migrate sql -e --yes
     restart: on-failure
     networks:
       - intranet
@@ -21,13 +21,13 @@ services:
       - kratos-migrate
     image: oryd/kratos:v0.10.0
     ports:
-      - '4433:4433' # public
-      - '4434:4434' # admin
+      - "4433:4433" # public
+      - "4434:4434" # admin
     restart: unless-stopped
     environment:
       - DSN=sqlite:///var/lib/sqlite/db.sqlite?_fk=true
       - LOG_LEVEL=trace
-    command: serve -c /etc/config/kratos/kratos.yml --dev --watch-courier
+    command: serve -c /etc/config/kratos/kratos-static.yml --dev --watch-courier
     volumes:
       - type: volume
         source: kratos-sqlite
