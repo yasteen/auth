@@ -12,10 +12,10 @@ const Register = () => {
     const { flowId, csrfToken } = useSelfService(false, "registration");
 
     const card = useRef<React.ElementRef<typeof FormCard>>(null);
-    const values = card.current?.getValues();
 
     const submit = async (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
+        const values = card.current?.getValues();
         if (
             !values ||
             !values.password ||
