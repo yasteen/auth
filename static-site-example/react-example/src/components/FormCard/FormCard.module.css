@@ -1,0 +1,21 @@
+.title {
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+
+.form {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+.submit {
+    margin-top: 10px;
+    grid-area: submit;
+    height: 50px;
+    background-color: #333333;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    border-radius: 10px;
+}
