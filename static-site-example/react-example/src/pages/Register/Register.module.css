@@ -1,0 +1,9 @@
+.main {
+    box-sizing: border-box;
+    height: calc(100% - var(--nav-height));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}

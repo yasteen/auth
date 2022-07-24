@@ -1,0 +1,35 @@
+.app {
+    /* text-align: center; */
+    background-color: #282c34;
+    height: 100vh;
+    width: 100vw;
+}
+
+.top_bar {
+    width: 100%;
+    height: var(--nav-height);
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-left: 10px;
+}
+
+.logout {
+    margin-right: 20px;
+    background-color: #282c34;
+    color: white;
+    font-size: medium;
+    padding: 5px;
+}
+
+.app_link {
+    color: #61dafb;
+}

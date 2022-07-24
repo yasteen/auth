@@ -1,0 +1,46 @@
+.main {
+    box-sizing: border-box;
+    height: calc(100% - var(--nav-height));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+
+.title {
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+
+.login_form {
+    display: grid;
+    grid-template-areas:
+        "email efield"
+        "psswd pfield"
+        "submit submit";
+    row-gap: 10px;
+    column-gap: 20px;
+}
+.email {
+    grid-area: email;
+}
+.efield {
+    grid-area: efield;
+}
+.psswd {
+    grid-area: psswd;
+}
+.pfield {
+    grid-area: pfield;
+}
+.submit {
+    margin-top: 10px;
+    grid-area: submit;
+    height: 50px;
+    background-color: #333333;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    border-radius: 10px;
+}
