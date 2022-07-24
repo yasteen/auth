@@ -85,10 +85,7 @@ const FormCard = React.forwardRef<FormCardHandle, FormCardProps>(
                     <button
                         className={styles.submit}
                         type="submit"
-                        onClick={(e) => {
-                            console.log("hi");
-                            submit(e);
-                        }}
+                        onClick={submit}
                     >
                         Submit
                     </button>

@@ -13,9 +13,13 @@
     margin-top: 10px;
     grid-area: submit;
     height: 50px;
-    background-color: #333333;
     color: white;
     font-size: x-large;
     font-weight: bold;
     border-radius: 10px;
+    cursor: pointer;
+    background-color: #333333;
+}
+.submit:hover {
+    background-color: #484d58;
 }

@@ -46,7 +46,7 @@ export const useSelfService = (
                     setCsrfToken(response.data.ui.nodes[0].attributes?.value);
                     return;
                 } catch (e) {
-                    console.log(`${type} flow expired`, e);
+                    console.error(`${type} flow expired`, e);
                 }
             }
             const response = await initializeSelfServiceFlowForBrowsers(type);
