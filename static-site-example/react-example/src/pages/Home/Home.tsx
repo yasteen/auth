@@ -1,4 +1,4 @@
-import RequireSignIn from "../../components/RequireSignedIn/RequireSignIn";
+import RequireSignIn from "../../kratos/components/RequireSignedIn/RequireSignIn";
 
 const Home = () => {
     return <RequireSignIn>Ok</RequireSignIn>;

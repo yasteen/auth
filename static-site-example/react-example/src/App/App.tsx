@@ -6,15 +6,15 @@ import {
     useNavigate,
 } from "react-router-dom";
 import styles from "./App.module.css";
-import Login from "../Login/Login";
-import Register from "../Register/Register";
-import Home from "../Home/Home";
-import { getLoginSession, kratosLogout } from "../../utils/helpers";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
+import Home from "../pages/Home/Home";
+import { getLoginSession, kratosLogout } from "../kratos/utils/helpers";
 import { useContext, useEffect, useState } from "react";
 import {
     LoginSession,
     LoginSessionContext,
-} from "../../context/loginSessionContext";
+} from "../kratos/context/loginSessionContext";
 
 interface AppRoute {
     path: string;
