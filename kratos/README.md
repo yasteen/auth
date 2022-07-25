@@ -2,6 +2,11 @@
 
 [Kratos](https://github.com/ory/kratos) is an Identity and User Management system.
 
+# Configuration
+
+Make configurations in [`stack.env`](stack.env). If server-side rendering is selected,
+UI return URLs can be further configured in [`config/kratos.yml`](config/kratos.yml)
+
 # Usage
 
 Kratos can be run simply with one command in the current directory.
@@ -15,23 +20,21 @@ Kratos can be run simply with one command in the current directory.
 Use the following command to run Kratos without any other components.
 
 ```bash
-> docker compose -f ./start-static.yml up --build --force-recreate
+> docker compose -f ./start.yml --env-file ./stack.env up --build --force-recreate
 ```
 
-To add any of the other components available in `./kratos`, simply append `-f [component].yml` into the command. As an example, Kratos uses [sqlite](https://github.com/sqlite/sqlite) as its database. To use postgres instead, run
+To add any of the other components available, simply append `-f [component].yml` into the command. As an example, Kratos uses [sqlite](https://github.com/sqlite/sqlite) as its database. To use postgres instead, run
 
 ```bash
-> docker compose -f ./start-static.yml -f ./pg.yml up --build --force-recreate
+> docker compose -f ./start.yml -f ./pg.yml --env-file ./stack.env up --build --force-recreate
 ```
 
 ## Available Components
 
--   **Kratos** (required)
-    -   `start-static.yml` - Starts Kratos for a static front-end site
-    -   `start-ssr.yml` - Starts Kratos with support for server-side rendering
--   `pg.yml` - Uses a Postgres database
--   `mail.yml` - Adds email capabilities to Kratos
--   `fe.yml` - Starts a simple front end (mostly for demo or testing purposes)
+-   [`start.yml`](start.yml) - Starts **Kratos** identity server - **REQUIRED**
+-   [`pg.yml`](pg.yml) - Uses a Postgres database
+-   [`mail.yml`](mail.yml) - Adds email capabilities to Kratos
+-   [`fe.yml`](fe.yml) - Starts a simple front end (mostly for demo or testing purposes)
 
 # Making Requests
 

@@ -1,4 +1,4 @@
-version: v0.7.1-alpha.1
+version: v0.10.0
 
 dsn: memory
 
@@ -28,6 +28,7 @@ serve:
 
 selfservice:
   default_browser_return_url: http://localhost:3000
+
   methods:
     password:
       enabled: true
