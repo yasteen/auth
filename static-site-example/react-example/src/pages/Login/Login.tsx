@@ -2,8 +2,11 @@ import React, { useRef } from "react";
 import { kratos } from "../../kratos/kratos";
 import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
-import { useSelfService, useUpdateLoginSession } from "../../utils/hooks";
-import FormCard from "../../components/FormCard/FormCard";
+import {
+    useSelfService,
+    useUpdateLoginSession,
+} from "../../kratos/utils/hooks";
+import FormCard from "../../kratos/components/FormCard/FormCard";
 
 const Login = () => {
     const updateLogin = useUpdateLoginSession();

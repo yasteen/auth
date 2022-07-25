@@ -1,5 +1,5 @@
 import { Session } from "@ory/client";
-import { kratos } from "../kratos/kratos";
+import { kratos } from "../kratos";
 
 /**
  *

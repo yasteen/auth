@@ -1,8 +1,11 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import FormCard from "../../components/FormCard/FormCard";
+import FormCard from "../../kratos/components/FormCard/FormCard";
 import { kratos } from "../../kratos/kratos";
-import { useSelfService, useUpdateLoginSession } from "../../utils/hooks";
+import {
+    useSelfService,
+    useUpdateLoginSession,
+} from "../../kratos/utils/hooks";
 import styles from "./Register.module.css";
 
 const Register = () => {

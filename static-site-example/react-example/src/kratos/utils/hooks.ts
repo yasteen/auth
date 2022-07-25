@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { LoginSessionContext } from "../context/loginSessionContext";
-import { kratos } from "../kratos/kratos";
+import { kratos } from "../kratos";
 import { getLoginSession } from "./helpers";
 
 export const useUpdateLoginSession = () => {
